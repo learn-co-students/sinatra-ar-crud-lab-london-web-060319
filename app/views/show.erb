@@ -1,0 +1,11 @@
+<%# show article content @article is an instance of Article %>
+
+<h1><%= @article.title %></h1>
+
+<p><%= @article.content %></p>
+
+<form method="post" action="/articles/<%= @article.id %>">
+<%# hidden form used for delete functionality %>
+  <input type="hidden" name="_method" value="delete" />
+  <input type="submit" value="DELETE" />
+</form>
